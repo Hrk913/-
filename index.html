@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정다각형 교점 계산기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>정다각형 대각선 교점 계산기</h1>
+    
+    <p>정다각형의 변의 수 (3~60):</p>
+    <input type="number" id="sidesInput" min="3" max="60" value="12">
+    
+    <p>정다각형의 크기 (반지름, 50~380):</p>
+    <input type="number" id="radiusInput" min="50" max="380" value="150">
+    
+    <button id="calculateButton">계산하기 및 그리기</button>
+    
+    <hr>
+    
+    <!-- 캔버스와 범례를 감싸는 메인 컨테이너 -->
+    <div class="main-content-container">
+        <!-- 캔버스 영역 -->
+        <canvas id="polygonCanvas" width="800" height="800"></canvas>
+        
+        <!-- 범례 영역 -->
+        <div class="legend-container">
+            <h3>겹치는 대각선 개수</h3>
+            <div id="legendItems">
+                <!-- 범례 항목들이 여기에 JavaScript로 채워짐 -->
+            </div>
+        </div>
+    </div>
+    
+    <h2>결과</h2>
+    
+    <p id="resultDisplay">계산 결과가 여기에 표시됩니다.</p>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    color: #000;
+}
+
+p {
+    margin: 10px 0;
+}
+
+input[type="number"], button {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+    width: 80%;
+}
+
+/* 메인 컨텐츠 컨테이너: 캔버스 + 범례 */
+.main-content-container {
+    display: flex;
+    justify-content: center; /* 캔버스와 범례를 가로 중앙에 배치 */
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    /* 이 컨테이너 자체를 body 내에서 중앙 정렬 */
+    width: fit-content; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+canvas {
+    display: block;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #ccc; 
+}
+
+.legend-container {
+    text-align: left;
+    padding: 15px; 
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 220px; 
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; 
+    font-size: 16px; 
+    cursor: pointer;
+}
+
+.color-box {
+    width: 1.5em; 
+    height: 1.5em; 
+    margin-right: 12px;
+    border: 1px solid #000;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.color-box.hidden {
+    background-color: #fff !important; 
+}
+
+.color-box.hidden::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: #ff0000; 
+    transform: translateY(-50%) rotate(45deg); 
+}
+
+#resultDisplay {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #d9534f;
+}
