@@ -1,4 +1,4 @@
-// script.js 파일 전체 내용입니다. 이 코드로 덮어쓰기 하세요!
+
 
 const colors = {
     '2': '#000000', '3': '#0000ff', '4': '#ff0000', '5': '#00ff00', 
@@ -206,3 +206,4 @@ document.getElementById('calculateButton').addEventListener('click', () => {
         document.getElementById('resultDisplay').textContent = '입력 범위를 확인해주세요: 변의 수(3~60), 크기(50~380)';
     }
 });
+
